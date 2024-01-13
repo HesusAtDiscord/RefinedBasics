@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 2.3,
+  "ingredient": { "item": "refinedbasics:mithril_raw" },
+  "result":"refinedbasics:mithril_ingot"
+}

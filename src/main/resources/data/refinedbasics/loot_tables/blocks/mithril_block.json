@@ -1,12 +1,12 @@
 {
-  "type": "minecraft:ore",
+  "type": "minecraft:block",
   "pools": [
     {
       "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "refinedbasics:mithril_raw"
+          "name": "refinedbasics:mithril_block"
         }
       ]
     }

@@ -13,6 +13,8 @@ public class ModItems {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, RefinedBasics.MOD_ID);
 
     public static final RegistryObject<Item> MITHRIL_INGOT = ITEMS.register("mithril_ingot", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.REFINEDBASICS_TAB)));
+    public static final RegistryObject<Item> MITHRIL_RAW = ITEMS.register("mithril_raw", () -> new Item(new Item.Properties().tab(ModCreativeModeTab.REFINEDBASICS_TAB)));
+
 
 
 

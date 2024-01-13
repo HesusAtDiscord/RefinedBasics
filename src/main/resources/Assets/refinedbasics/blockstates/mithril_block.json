@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "refinedbasics:block/mithril_block" }
+  }
+}
