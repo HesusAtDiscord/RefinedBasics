@@ -1,6 +1,8 @@
 package net.hesus.refinedbasics;
 
 import com.mojang.logging.LogUtils;
+import net.hesus.refinedbasics.block.ModBlocks;
+import net.hesus.refinedbasics.item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -18,6 +20,9 @@ public class RefinedBasics {
 
     public RefinedBasics() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
