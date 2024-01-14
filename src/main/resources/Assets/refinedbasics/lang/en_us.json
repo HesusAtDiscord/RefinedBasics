@@ -1,8 +1,10 @@
 {
   "item.refinedbasics.mithril_ingot": "Mithril Ingot",
+  "item.refinedbasics.mithril_raw": "Raw Mithril",
 
 
   "block.refinedbasics.mithril_ore": "Mithril Ore",
+  "block.refinedbasics.mithril_block": "Block of Mithril",
 
 
   "itemGroup.refinedbasics": "RefinedBasics"
