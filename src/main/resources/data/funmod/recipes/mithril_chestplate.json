@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":
+	[
+		"I I",
+		"III",
+		"III"
+	],
+	"key":
+	{
+		"I": { "item": "funmod:mithril_ingot" }
+	},
+	"result": { "item": "funmod:mithril_chestplate" }
+}

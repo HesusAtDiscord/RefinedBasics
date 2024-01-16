@@ -1,0 +1,19 @@
+{
+	"item.funmod.mithril_ingot": "Mithril Ingot",
+	"item.funmod.mithril_nugget": "Mithril Nugget",
+
+	"item.funmod.mithril_axe": "Mithril Axe",
+	"item.funmod.mithril_pickaxe": "Mithril Pickaxe",
+	"item.funmod.mithril_hoe": "Mithril Hoe",
+	"item.funmod.mithril_shovel": "Mithril Shovel",
+	"item.funmod.mithril_sword": "Mithril Sword",
+
+	"item.funmod.mithril_helmet": "Mithril Helmet",
+	"item.funmod.mithril_chestplate": "Mithril Chestplate",
+	"item.funmod.mithril_leggings": "Mithril Leggings",
+	"item.funmod.mithril_boots": "Mithril Boots",
+
+	"block.funmod.mithril_ore": "Mithril Ore",
+
+	"itemGroup.funmod": "RS Armor Item Group"
+}
