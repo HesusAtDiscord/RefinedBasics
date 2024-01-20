@@ -17,11 +17,9 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.AbstractFurnaceBlock;
-import net.minecraft.world.level.block.FurnaceBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.entity.FurnaceBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class FunFurnaceBlock extends AbstractFurnaceBlock
@@ -51,7 +49,7 @@ public class FunFurnaceBlock extends AbstractFurnaceBlock
 
     @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        return createFurnaceTicker(level, type, ModBlockEntities.FUN_FURNACE_ENTITY.get());
+        return createFunFurnaceTicker(level, type, ModBlockEntities.FUN_FURNACE_ENTITY.get());
     }
 
     public void animateTick(BlockState p_221253_, Level p_221254_, BlockPos p_221255_, RandomSource p_221256_) {
@@ -73,5 +71,11 @@ public class FunFurnaceBlock extends AbstractFurnaceBlock
            p_221254_.addParticle(ParticleTypes.SMOKE, d0 + d5, d1 + d6, d2 + d7, 0.0D, 0.0D, 0.0D);
            p_221254_.addParticle(ParticleTypes.FLAME, d0 + d5, d1 + d6, d2 + d7, 0.0D, 0.0D, 0.0D);
         }
+    }
+
+    @Nullable
+    protected static <T extends BlockEntity> BlockEntityTicker<T> createFunFurnaceTicker(Level level, BlockEntityType<T> entityType, BlockEntityType<? extends FunFurnaceBlockEntity> specificType)
+    {
+        return level.isClientSide ? null : createTickerHelper(entityType, specificType, FunFurnaceBlockEntity::serverTick);
     }
 }
