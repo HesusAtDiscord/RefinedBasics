@@ -15,5 +15,7 @@
 
 	"block.funmod.mithril_ore": "Mithril Ore",
 
-	"itemGroup.funmod": "RS Armor Item Group"
+	"itemGroup.funmod": "FunMod Item Group",
+
+	"container.furnace": "Fun Furnace"
 }
