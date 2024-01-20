@@ -15,10 +15,11 @@ import net.minecraft.world.inventory.FurnaceMenu;
 // import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 // import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 // import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class FunFurnaceBlockEntity extends AbstractFunFurnaceBlockEntity
+public class FunFurnaceBlockEntity extends AbstractFurnaceBlockEntity
 {
     // private static final float MIN_SPEED_MODIFIER = 0.1f;
     // private final RecipeManager.CachedCheck<Container, ? extends AbstractCookingRecipe> quickCheck;
