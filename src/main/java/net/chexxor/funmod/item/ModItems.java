@@ -5,7 +5,9 @@ import java.util.function.Supplier;
 import javax.annotation.Nonnull;
 
 import net.chexxor.funmod.FunMod;
+import net.chexxor.funmod.item.custom.BananaThrowItem;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.AxeItem;
@@ -55,6 +57,16 @@ public class ModItems
     public static final RegistryObject<ArmorItem> MITHRIL_CHESTPLATE = ITEMS.register("mithril_chestplate",  getArmorSupplier(ModArmorMaterials.MITHRIL, EquipmentSlot.CHEST));
     public static final RegistryObject<ArmorItem> MITHRIL_LEGGINGS   = ITEMS.register("mithril_leggings",    getArmorSupplier(ModArmorMaterials.MITHRIL, EquipmentSlot.LEGS));
     public static final RegistryObject<ArmorItem> MITHRIL_BOOTS      = ITEMS.register("mithril_boots",       getArmorSupplier(ModArmorMaterials.MITHRIL, EquipmentSlot.FEET));
+
+    // Food
+    public static final FoodProperties BANANA_PROPERTIES = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.5F).build();
+    public static final FoodProperties BLUE_NANA_PROPERTIES = (new FoodProperties.Builder()).nutrition(10).saturationMod(1.4F).build();
+    public static final RegistryObject<Item> BANANA = ITEMS.register("banana", () -> new Item(DefaultProperties().food(BANANA_PROPERTIES)));
+    // public static final RegistryObject<Item> BLUE_NANA = ITEMS.register("blue_nana", () -> new Item(DefaultProperties().food(BLUE_NANA_PROPERTIES)));
+
+    public static final RegistryObject<Item> BLUE_NANARANG = ITEMS.register("blue_nana", () -> new BananaThrowItem(DefaultProperties()));//.food(BLUE_NANA_PROPERTIES)));
+    // public static final Item SNOWBALL = registerItem("snowball", new SnowballItem((new Item.Properties()).stacksTo(16).tab(CreativeModeTab.TAB_MISC)));
+
 
     // Old way of doing it:
     // public static final RegistryObject<Item> MITHRIL_SWORD      = ITEMS.register("mithril_sword",   () -> new SwordItem(ModTiers.MITHRIL, 3, -2.4f, DefaultProperties()));
