@@ -40,21 +40,23 @@ public class FunFurnaceBlockEntity extends AbstractFurnaceBlockEntity
         super(ModBlockEntities.FUN_FURNACE_ENTITY.get(), pos, state, RecipeType.SMELTING);
 
         this.quickCheck = RecipeManager.createCheck(RecipeType.SMELTING);
-        this.speedModifier = DEFAULT_SPEED_MODIFIER;
-        if(speedModifier < MIN_SPEED_MODIFIER)
-            this.speedModifier = 0.1f;
+        setSpeedModifier(DEFAULT_SPEED_MODIFIER);
+    }
+
+    public void setSpeedModifier(float speedModifier)
+    {
+        this.speedModifier = Math.max(speedModifier, MIN_SPEED_MODIFIER);
     }
 
     @Override
     protected Component getDefaultName()
     {
-        return Component.translatable("container.furnace");
+        return Component.translatable("container.funmod.furnace");
     }
 
     @Override
     protected AbstractContainerMenu createMenu(int containerId, @Nonnull Inventory inventory)
     {
-        FunMod.Log("Entity - createMenu");
         return new FurnaceMenu(containerId, inventory, this, this.dataAccess);
     }
 

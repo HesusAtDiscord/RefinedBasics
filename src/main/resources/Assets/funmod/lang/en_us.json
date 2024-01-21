@@ -14,8 +14,9 @@
 	"item.funmod.mithril_boots": "Mithril Boots",
 
 	"block.funmod.mithril_ore": "Mithril Ore",
+	"block.funmod.fun_furnace": "Chexxor Furnace",
 
 	"itemGroup.funmod": "FunMod Item Group",
 
-	"container.furnace": "Fun Furnace"
+	"container.funmod.furnace": "Chexxor Furnace"
 }

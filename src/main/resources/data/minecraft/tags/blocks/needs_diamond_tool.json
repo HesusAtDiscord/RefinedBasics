@@ -3,6 +3,7 @@
   "values": [
     "refinedbasics:mithril_ore",
     "refinedbasics:mithril_block",
+    "funmod:fun_furnace",
     "funmod:mithril_ore"
   ]
 }

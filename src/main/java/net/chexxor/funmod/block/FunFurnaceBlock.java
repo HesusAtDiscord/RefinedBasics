@@ -3,7 +3,6 @@ package net.chexxor.funmod.block;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-import net.chexxor.funmod.FunMod;
 import net.chexxor.funmod.block.entity.FunFurnaceBlockEntity;
 import net.chexxor.funmod.block.entity.ModBlockEntities;
 import net.minecraft.core.BlockPos;
@@ -24,21 +23,27 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class FunFurnaceBlock extends AbstractFurnaceBlock
 {
-    public FunFurnaceBlock(Properties properties)
+    private static final double CRACKLE_CHANCE_PER_TICK = 0.1D;
+
+    private float speedModifier = 1f;
+
+    public FunFurnaceBlock(Properties properties, float speedModifier)
     {
         super(properties);
+        this.speedModifier = speedModifier;
     }
 
     @Override
     public BlockEntity newBlockEntity(@Nonnull BlockPos pos, @Nonnull BlockState state)
     {
-        return new FunFurnaceBlockEntity(pos, state);
+        FunFurnaceBlockEntity entity = new FunFurnaceBlockEntity(pos, state);
+        entity.setSpeedModifier(speedModifier);
+        return entity;
     }
 
     @Override
     protected void openContainer(Level level, BlockPos pos, Player player)
     {
-        FunMod.Log("FunFurnaceBlock - openContainer");
         BlockEntity blockentity = level.getBlockEntity(pos);
         if (blockentity instanceof FunFurnaceBlockEntity)
         {
@@ -48,28 +53,35 @@ public class FunFurnaceBlock extends AbstractFurnaceBlock
     }
 
     @Nullable
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type)
+    {
         return createFunFurnaceTicker(level, type, ModBlockEntities.FUN_FURNACE_ENTITY.get());
     }
 
-    public void animateTick(BlockState p_221253_, Level p_221254_, BlockPos p_221255_, RandomSource p_221256_) {
-        if (p_221253_.getValue(LIT)) {
-           double d0 = (double)p_221255_.getX() + 0.5D;
-           double d1 = (double)p_221255_.getY();
-           double d2 = (double)p_221255_.getZ() + 0.5D;
-           if (p_221256_.nextDouble() < 0.1D) {
-              p_221254_.playLocalSound(d0, d1, d2, SoundEvents.FURNACE_FIRE_CRACKLE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
-           }
+    public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random)
+    {
+        if (state.getValue(LIT))
+        {
+            double x = (double)pos.getX() + 0.5D;
+            double y = (double)pos.getY();
+            double z = (double)pos.getZ() + 0.5D;
 
-           Direction direction = p_221253_.getValue(FACING);
-           Direction.Axis direction$axis = direction.getAxis();
-           double d3 = 0.52D;
-           double d4 = p_221256_.nextDouble() * 0.6D - 0.3D;
-           double d5 = direction$axis == Direction.Axis.X ? (double)direction.getStepX() * 0.52D : d4;
-           double d6 = p_221256_.nextDouble() * 6.0D / 16.0D;
-           double d7 = direction$axis == Direction.Axis.Z ? (double)direction.getStepZ() * 0.52D : d4;
-           p_221254_.addParticle(ParticleTypes.SMOKE, d0 + d5, d1 + d6, d2 + d7, 0.0D, 0.0D, 0.0D);
-           p_221254_.addParticle(ParticleTypes.FLAME, d0 + d5, d1 + d6, d2 + d7, 0.0D, 0.0D, 0.0D);
+            // Chance of playing the crackle sound
+            if (random.nextDouble() < CRACKLE_CHANCE_PER_TICK)
+            {
+                level.playLocalSound(x, y, z, SoundEvents.FURNACE_FIRE_CRACKLE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+            }
+
+            // Spawn particles
+            Direction direction = state.getValue(FACING);
+            Direction.Axis axis = direction.getAxis();
+            double forwardOffset = 0.52D;
+            double sidewaysOffset = random.nextDouble() * 0.6D - 0.3D;
+            double xOffset = axis == Direction.Axis.X ? (double)direction.getStepX() * forwardOffset : sidewaysOffset;
+            double yOffset = random.nextDouble() * 6.0D / 16.0D;
+            double zOffset = axis == Direction.Axis.Z ? (double)direction.getStepZ() * forwardOffset : sidewaysOffset;
+            level.addParticle(ParticleTypes.SMOKE, x + xOffset, y + yOffset, z + zOffset, 0.0D, 0.0D, 0.0D);
+            level.addParticle(ParticleTypes.FLAME, x + xOffset, y + yOffset, z + zOffset, 0.0D, 0.0D, 0.0D);
         }
     }
 

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "refinedbasics:mithril_block"
+    "refinedbasics:mithril_block",
+    "funmod:fun_furnace"
   ]
 }
