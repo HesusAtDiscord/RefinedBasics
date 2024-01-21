@@ -1,8 +1,7 @@
-package net.chexxor.funmod.material;
+package net.chexxor.funmod.item;
 
 import java.util.function.Supplier;
 
-import net.chexxor.funmod.item.ModItems;
 import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -35,26 +34,26 @@ public enum ModTiers implements Tier
     }
 
     public int getUses() {
-        return this.uses;
+        return uses;
     }
 
     public float getSpeed() {
-        return this.speed;
+        return speed;
     }
 
     public float getAttackDamageBonus() {
-        return this.damage;
+        return damage;
     }
 
     public int getLevel() {
-        return this.level;
+        return level;
     }
 
     public int getEnchantmentValue() {
-        return this.enchantmentValue;
+        return enchantmentValue;
     }
 
     public Ingredient getRepairIngredient() {
-        return this.repairIngredient.get();
+        return repairIngredient.get();
     }
 }
