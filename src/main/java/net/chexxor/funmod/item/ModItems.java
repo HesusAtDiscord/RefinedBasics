@@ -8,7 +8,6 @@ import net.chexxor.funmod.FunMod;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
@@ -23,15 +22,15 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems
 {
-    public static final Properties DefaultProperties = new Item.Properties().tab(ModCreativeModeTab.FUNMOD_TAB);
+    public static Properties DefaultProperties(){ return new Item.Properties().tab(ModCreativeModeTab.FUNMOD_TAB); }
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FunMod.MOD_ID);
 
     // Materials
-    public static final RegistryObject<Item> BLACK_INGOT = ITEMS.register("black_ingot", () -> new Item(DefaultProperties));
+    public static final RegistryObject<Item> BLACK_INGOT = ITEMS.register("black_ingot", () -> new Item(DefaultProperties()));
 
-    public static final RegistryObject<Item> MITHRIL_INGOT = ITEMS.register("mithril_ingot", () -> new Item(DefaultProperties));
-    public static final RegistryObject<Item> MITHRIL_NUGGET = ITEMS.register("mithril_nugget",  () -> new Item(DefaultProperties));
+    public static final RegistryObject<Item> MITHRIL_INGOT = ITEMS.register("mithril_ingot", () -> new Item(DefaultProperties()));
+    public static final RegistryObject<Item> MITHRIL_NUGGET = ITEMS.register("mithril_nugget",  () -> new Item(DefaultProperties()));
 
     // Tools
     public static final RegistryObject<Item> BLACK_SWORD        = ITEMS.register("black_sword",         getToolSupplier(ModTiers.BLACK, ToolType.SWORD));
@@ -58,11 +57,11 @@ public class ModItems
     public static final RegistryObject<ArmorItem> MITHRIL_BOOTS      = ITEMS.register("mithril_boots",       getArmorSupplier(ModArmorMaterials.MITHRIL, EquipmentSlot.FEET));
 
     // Old way of doing it:
-    // public static final RegistryObject<Item> MITHRIL_SWORD      = ITEMS.register("mithril_sword",   () -> new SwordItem(ModTiers.MITHRIL, 3, -2.4f, DefaultProperties));
-    // public static final RegistryObject<Item> MITHRIL_PICKAXE    = ITEMS.register("mithril_pickaxe", () -> new PickaxeItem(ModTiers.MITHRIL, 1, -2.8f, DefaultProperties));
-    // public static final RegistryObject<Item> MITHRIL_AXE        = ITEMS.register("mithril_axe",     () -> new AxeItem(ModTiers.MITHRIL, 6, -3.2f, DefaultProperties));
-    // public static final RegistryObject<Item> MITHRIL_SHOVEL     = ITEMS.register("mithril_shovel",  () -> new ShovelItem(ModTiers.MITHRIL, 1, -3.0f, DefaultProperties));
-    // public static final RegistryObject<Item> MITHRIL_HOE        = ITEMS.register("mithril_hoe",     () -> new HoeItem(ModTiers.MITHRIL, 0, -1.0f, DefaultProperties));
+    // public static final RegistryObject<Item> MITHRIL_SWORD      = ITEMS.register("mithril_sword",   () -> new SwordItem(ModTiers.MITHRIL, 3, -2.4f, DefaultProperties()));
+    // public static final RegistryObject<Item> MITHRIL_PICKAXE    = ITEMS.register("mithril_pickaxe", () -> new PickaxeItem(ModTiers.MITHRIL, 1, -2.8f, DefaultProperties()));
+    // public static final RegistryObject<Item> MITHRIL_AXE        = ITEMS.register("mithril_axe",     () -> new AxeItem(ModTiers.MITHRIL, 6, -3.2f, DefaultProperties()));
+    // public static final RegistryObject<Item> MITHRIL_SHOVEL     = ITEMS.register("mithril_shovel",  () -> new ShovelItem(ModTiers.MITHRIL, 1, -3.0f, DefaultProperties()));
+    // public static final RegistryObject<Item> MITHRIL_HOE        = ITEMS.register("mithril_hoe",     () -> new HoeItem(ModTiers.MITHRIL, 0, -1.0f, DefaultProperties()));
 
     // TODO: Add override for custom strength and speed values
     public static Supplier<? extends Item> getToolSupplier(@Nonnull ModTiers tier, ToolType type)
@@ -70,15 +69,15 @@ public class ModItems
         switch (type)
         {
             case SWORD:
-                return () -> new SwordItem(tier, 3, -2.4f, DefaultProperties);
+                return () -> new SwordItem(tier, 3, -2.4f, DefaultProperties());
             case PICKAXE:
-                return () -> new PickaxeItem(tier, 1, -2.8f, DefaultProperties);
+                return () -> new PickaxeItem(tier, 1, -2.8f, DefaultProperties());
             case AXE:
-                return () -> new AxeItem(tier, 6, -3.2f, DefaultProperties);
+                return () -> new AxeItem(tier, 6, -3.2f, DefaultProperties());
             case SHOVEL:
-                return () -> new ShovelItem(tier, 1, -3.0f, DefaultProperties);
+                return () -> new ShovelItem(tier, 1, -3.0f, DefaultProperties());
             case HOE:
-                return () -> new HoeItem(tier, 0, -1.0f, DefaultProperties);
+                return () -> new HoeItem(tier, 0, -1.0f, DefaultProperties());
             default:
                 FunMod.Log("Error: getToolItem: Unknown ToolType: " + type.toString());
                 return null;
@@ -87,7 +86,7 @@ public class ModItems
 
     public static Supplier<? extends ArmorItem> getArmorSupplier(@Nonnull ArmorMaterial tier, EquipmentSlot type)
     {
-        return () -> new ArmorItem(tier, type, DefaultProperties);
+        return () -> new ArmorItem(tier, type, DefaultProperties());
     }
 
     public static void register(IEventBus eventBus) {

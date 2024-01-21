@@ -175,6 +175,7 @@ public class FunFurnaceBlockEntity extends AbstractFurnaceBlockEntity
         if (isLit())
         {
             --litTime;
+            dataAccess.set(DATA_LIT_TIME, litTime);
         }
 
         ItemStack itemstack = items.get(SLOT_FUEL);
