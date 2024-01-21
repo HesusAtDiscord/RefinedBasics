@@ -198,6 +198,7 @@ public class FunFurnaceBlockEntity extends AbstractFurnaceBlockEntity
             if (!isLit() && canBurn)
             {
                 litTime = getBurnDuration(itemstack);
+                dataAccess.set(DATA_LIT_TIME, litTime);
                 dataAccess.set(DATA_LIT_DURATION, litTime);
                 if (isLit()) {
                     dirty = true;
