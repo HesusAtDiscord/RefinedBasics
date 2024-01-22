@@ -24,6 +24,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems
 {
+    @Nonnull
     public static Properties DefaultProperties(){ return new Item.Properties().tab(ModCreativeModeTab.FUNMOD_TAB); }
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FunMod.MOD_ID);
@@ -67,7 +68,6 @@ public class ModItems
     public static final RegistryObject<Item> BLUE_NANARANG = ITEMS.register("blue_nana", () -> new BananaThrowItem(DefaultProperties()));//.food(BLUE_NANA_PROPERTIES)));
     // public static final Item SNOWBALL = registerItem("snowball", new SnowballItem((new Item.Properties()).stacksTo(16).tab(CreativeModeTab.TAB_MISC)));
 
-
     // Old way of doing it:
     // public static final RegistryObject<Item> MITHRIL_SWORD      = ITEMS.register("mithril_sword",   () -> new SwordItem(ModTiers.MITHRIL, 3, -2.4f, DefaultProperties()));
     // public static final RegistryObject<Item> MITHRIL_PICKAXE    = ITEMS.register("mithril_pickaxe", () -> new PickaxeItem(ModTiers.MITHRIL, 1, -2.8f, DefaultProperties()));
@@ -96,7 +96,7 @@ public class ModItems
         }
     }
 
-    public static Supplier<? extends ArmorItem> getArmorSupplier(@Nonnull ArmorMaterial tier, EquipmentSlot type)
+    public static Supplier<? extends ArmorItem> getArmorSupplier(@Nonnull ArmorMaterial tier, @Nonnull EquipmentSlot type)
     {
         return () -> new ArmorItem(tier, type, DefaultProperties());
     }
