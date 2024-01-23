@@ -1,11 +1,10 @@
 {
+  "block.refinedbasics.iron_furnace": "Iron Furnace",
+  "block.refinedbasics.mithril_block": "Block of Mithril",
+  "block.refinedbasics.mithril_ore": "Mithril Ore",
+  "container.refinedbasics.test_furnace": "Iron Furnace",
   "item.refinedbasics.mithril_ingot": "Mithril Ingot",
   "item.refinedbasics.mithril_raw": "Raw Mithril",
-
-
-  "block.refinedbasics.mithril_ore": "Mithril Ore",
-  "block.refinedbasics.mithril_block": "Block of Mithril",
-
-
-  "itemGroup.refinedbasics": "RefinedBasics"
+  "itemGroup.refinedbasics": "RefinedBasics",
+  "item.refinedbasics.sandwich_beef": "Beef Sandwich"
 }

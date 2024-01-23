@@ -1,7 +1,7 @@
 package net.hesus.refinedbasics.block;
 
 import net.hesus.refinedbasics.RefinedBasics;
-import net.hesus.refinedbasics.block.chexxor.TestFurnaceBlock;
+import net.hesus.refinedbasics.block.custom.chexxor.TestFurnaceBlock;
 import net.hesus.refinedbasics.item.ModCreativeModeTab;
 import net.hesus.refinedbasics.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -29,13 +29,12 @@ public class ModBlocks {
 
                     public static final RegistryObject<Block> IRON_FURNACE = registerBlock("iron_furnace",
             () -> new TestFurnaceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(3).requiresCorrectToolForDrops(), 2f));
+                    .strength(3), 2f));
 
 
     public static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, ModCreativeModeTab.REFINEDBASICS_TAB);
-
         return toReturn;
     }
 

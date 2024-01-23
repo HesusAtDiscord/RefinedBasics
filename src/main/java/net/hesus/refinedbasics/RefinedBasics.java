@@ -2,7 +2,7 @@ package net.hesus.refinedbasics;
 
 import com.mojang.logging.LogUtils;
 import net.hesus.refinedbasics.block.ModBlocks;
-import net.hesus.refinedbasics.block.chexxor.ModBlockEntities;
+import net.hesus.refinedbasics.block.custom.chexxor.ModBlockEntities;
 import net.hesus.refinedbasics.item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;

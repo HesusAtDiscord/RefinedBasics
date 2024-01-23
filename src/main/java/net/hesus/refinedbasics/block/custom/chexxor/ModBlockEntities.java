@@ -1,4 +1,4 @@
-package net.hesus.refinedbasics.block.chexxor;
+package net.hesus.refinedbasics.block.custom.chexxor;
 
 import net.hesus.refinedbasics.RefinedBasics;
 import net.hesus.refinedbasics.block.ModBlocks;

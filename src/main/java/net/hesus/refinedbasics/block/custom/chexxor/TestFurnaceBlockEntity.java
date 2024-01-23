@@ -1,4 +1,4 @@
-package net.hesus.refinedbasics.block.chexxor;
+package net.hesus.refinedbasics.block.custom.chexxor;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;

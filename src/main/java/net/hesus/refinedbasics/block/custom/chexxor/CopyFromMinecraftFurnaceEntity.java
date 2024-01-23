@@ -1,4 +1,4 @@
-package net.hesus.refinedbasics.block.chexxor;
+package net.hesus.refinedbasics.block.custom.chexxor;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
