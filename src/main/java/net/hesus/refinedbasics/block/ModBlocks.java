@@ -9,7 +9,6 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -21,14 +20,14 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, RefinedBasics.MOD_ID);
 
     public static final RegistryObject<Block> MITHRIL_ORE = registerBlock("mithril_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+            () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> MITHRIL_BLOCK = registerBlock("mithril_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+            () -> new Block(BlockBehaviour.Properties.of()
                     .strength(1).requiresCorrectToolForDrops()));
 
                     public static final RegistryObject<Block> IRON_FURNACE = registerBlock("iron_furnace",
-            () -> new TestFurnaceBlock(BlockBehaviour.Properties.of(Material.STONE)
+            () -> new TestFurnaceBlock(BlockBehaviour.Properties.of()
                     .strength(3), 2f));
 
 
@@ -40,7 +39,7 @@ public class ModBlocks {
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
                                                                             CreativeModeTab tab) {
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
 

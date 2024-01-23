@@ -2,6 +2,7 @@ package net.hesus.refinedbasics.block.custom.chexxor;
 
 import javax.annotation.Nullable;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -36,6 +37,11 @@ public class TestFurnaceBlock extends AbstractFurnaceBlock {
         TestFurnaceBlockEntity entity = new TestFurnaceBlockEntity(pos, state);
         entity.setSpeedModifier(speedModifier);
         return entity;
+    }
+
+    @Override
+    protected MapCodec<? extends AbstractFurnaceBlock> codec() {
+        return null;
     }
 
     // Copied from Minecraft's Furnace, but adapted for this mods entity
@@ -74,18 +80,5 @@ public class TestFurnaceBlock extends AbstractFurnaceBlock {
             level.addParticle(ParticleTypes.SMOKE, x + xOffset, y + yOffset, z + zOffset, 0.0D, 0.0D, 0.0D);
             level.addParticle(ParticleTypes.FLAME, x + xOffset, y + yOffset, z + zOffset, 0.0D, 0.0D, 0.0D);
         }
-    }
-
-    @Nullable
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type)
-    {
-        return createTestFurnaceTicker(level, type, ModBlockEntities.IRON_FURNACE_ENTITY.get());
-    }
-
-    // Uses the `serverTick` method from this mod's version of AbstractFurnaceBlockEntity (which uses the updated cooking time)
-    @Nullable
-    protected static <T extends BlockEntity> BlockEntityTicker<T> createTestFurnaceTicker(Level level, BlockEntityType<T> entityType, BlockEntityType<? extends CopyFromMinecraftFurnaceEntity> specificType)
-    {
-        return level.isClientSide ? null : createTickerHelper(entityType, specificType, CopyFromMinecraftFurnaceEntity::serverTick);
     }
 }

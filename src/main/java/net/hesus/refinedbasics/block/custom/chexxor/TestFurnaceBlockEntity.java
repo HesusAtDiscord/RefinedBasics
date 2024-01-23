@@ -2,11 +2,14 @@ package net.hesus.refinedbasics.block.custom.chexxor;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
 // Example of a minimal implementation for a custom speed furnace
-public class TestFurnaceBlockEntity extends CopyFromMinecraftFurnaceEntity {
+public class TestFurnaceBlockEntity extends AbstractFurnaceBlockEntity {
     private static final float MIN_SPEED_MODIFIER = 0.1f;
     private static final float DEFAULT_SPEED_MODIFIER = 2f;
 
@@ -22,14 +25,19 @@ public class TestFurnaceBlockEntity extends CopyFromMinecraftFurnaceEntity {
         this.speedModifier = Math.max(speedModifier, MIN_SPEED_MODIFIER);
     }
 
-    @Override
-    protected int getTotalCookTime()
-    {
-        return (int)(super.getTotalCookTime() / speedModifier);
-    }
+   // @Override
+   // protected int getTotalCookTime()
+   // {
+   //     return (int)(super.getTotalCookTime() / speedModifier);
+   // }
 
     @Override
     protected Component getDefaultName() {
         return Component.translatable("container.refinedbasics.test_furnace");
+    }
+
+    @Override
+    protected AbstractContainerMenu createMenu(int i, Inventory inventory) {
+        return null;
     }
 }
