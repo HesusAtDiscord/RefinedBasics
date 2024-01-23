@@ -14,6 +14,7 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.AbstractFurnaceBlock;
+import net.minecraft.world.level.block.FurnaceBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -21,7 +22,10 @@ import net.minecraft.world.level.block.state.BlockState;
 
 // Example of a minimal implementation for a custom speed furnace
 // Takes in a speed modifier and passes it on to the block entity when it is created
-public class TestFurnaceBlock extends AbstractFurnaceBlock {
+public class TestFurnaceBlock extends AbstractFurnaceBlock
+{
+    public static final MapCodec<FurnaceBlock> CODEC = simpleCodec(FurnaceBlock::new);
+
     private float speedModifier = 1f;
 
     // Constructor takes in a speed modifier
@@ -33,19 +37,22 @@ public class TestFurnaceBlock extends AbstractFurnaceBlock {
 
     // Passes the speed modifier to the block entity when it is created
     @Nullable
-    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state)
+    {
         TestFurnaceBlockEntity entity = new TestFurnaceBlockEntity(pos, state);
         entity.setSpeedModifier(speedModifier);
         return entity;
     }
 
     @Override
-    protected MapCodec<? extends AbstractFurnaceBlock> codec() {
-        return null;
+    protected MapCodec<? extends AbstractFurnaceBlock> codec()
+    {
+        return CODEC;
     }
 
     // Copied from Minecraft's Furnace, but adapted for this mods entity
-    protected void openContainer(Level level, BlockPos pos, Player player) {
+    protected void openContainer(Level level, BlockPos pos, Player player)
+    {
         BlockEntity blockentity = level.getBlockEntity(pos);
         if (blockentity instanceof TestFurnaceBlockEntity)
         {
@@ -80,5 +87,18 @@ public class TestFurnaceBlock extends AbstractFurnaceBlock {
             level.addParticle(ParticleTypes.SMOKE, x + xOffset, y + yOffset, z + zOffset, 0.0D, 0.0D, 0.0D);
             level.addParticle(ParticleTypes.FLAME, x + xOffset, y + yOffset, z + zOffset, 0.0D, 0.0D, 0.0D);
         }
+    }
+
+    @Nullable
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type)
+    {
+        return createTestFurnaceTicker(level, type, ModBlockEntities.IRON_FURNACE_ENTITY.get());
+    }
+
+    // Uses the `serverTick` method from this mod's version of AbstractFurnaceBlockEntity (which uses the updated cooking time)
+    @Nullable
+    protected static <T extends BlockEntity> BlockEntityTicker<T> createTestFurnaceTicker(Level level, BlockEntityType<T> entityType, BlockEntityType<? extends CopyFromMinecraftFurnaceEntity> specificType)
+    {
+        return level.isClientSide ? null : createTickerHelper(entityType, specificType, CopyFromMinecraftFurnaceEntity::serverTick);
     }
 }
