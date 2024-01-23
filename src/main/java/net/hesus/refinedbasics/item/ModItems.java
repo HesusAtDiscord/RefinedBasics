@@ -1,12 +1,9 @@
 package net.hesus.refinedbasics.item;
 
 import net.hesus.refinedbasics.RefinedBasics;
-import net.hesus.refinedbasics.block.ModBlocks;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -17,8 +14,8 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, RefinedBasics.MOD_ID);
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, RefinedBasics.MOD_ID);
 // misc
-    public static final RegistryObject<Item> MITHRIL_INGOT = ITEMS.register("mithril_ingot", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> MITHRIL_RAW = ITEMS.register("mithril_raw", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MITHRIL_INGOT = createItem("mithril_ingot", new Item.Properties());
+    public static final RegistryObject<Item> MITHRIL_RAW = createItem("mithril_raw", new Item.Properties());
 
 // food values
     public static final int NUTRITION_BREAD = 5;
@@ -33,16 +30,10 @@ public class ModItems {
 
 
     // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
-            event.accept(MITHRIL_INGOT);
-            event.accept(MITHRIL_RAW);
-            event.accept(SANDWICH_BEEF);
-            event.accept(ModBlocks.MITHRIL_BLOCK);
-            event.accept(ModBlocks.MITHRIL_ORE);
-            event.accept(ModBlocks.IRON_FURNACE);
-        }
+    private static RegistryObject<Item> createItem(String name, Item.Properties properties) {
+        RegistryObject<Item> item = ITEMS.register(name, () -> new Item(properties));
+        ModCreativeModeTab.addToTab(item);
+        return item;
     }
 
     public static void register(IEventBus eventBus) {
