@@ -16,9 +16,8 @@ https://files.minecraftforge.net/net/minecraftforge/forge/index_1.20.4.html
 
 Select "Install Client"
 
-3: Download the refinedbasics[version].jar and paste/move to %appdata%\Roaming\.minecraft\mods\
-https://drive.google.com/drive/folders/12PSOmX_Wvd6fzJf_woCWVeXe4QluyUjr?usp=sharing
-(If the mods-folder is non-existent, create one)
+3: Download the .jar and paste/move to %appdata%\Roaming\.minecraft\mods\
+(If mods-folder is non-existent, create one)
 
 4: Launching Forge:
 - Launch the standard Minecraft Launcher
