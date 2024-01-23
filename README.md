@@ -13,7 +13,8 @@ https://www.java.com/en/download/
 
 2: Make sure to download the INSTALLER in the following link and double-click to install Forge to your Minecraft Launcher:
 https://files.minecraftforge.net/net/minecraftforge/forge/index_1.20.4.html
-(Run with Java if it doesn't automatically)
+
+Select "Install Client"
 
 3: Download the .jar and paste/move to %appdata%\Roaming\.minecraft\mods\
 (If mods-folder is non-existent, create one)
