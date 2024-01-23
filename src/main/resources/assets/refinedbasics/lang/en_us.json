@@ -5,6 +5,6 @@
   "container.refinedbasics.test_furnace": "Iron Furnace",
   "item.refinedbasics.mithril_ingot": "Mithril Ingot",
   "item.refinedbasics.mithril_raw": "Raw Mithril",
-  "itemGroup.refinedbasics": "RefinedBasics",
-  "item.refinedbasics.sandwich_beef": "Beef Sandwich"
+  "item.refinedbasics.sandwich_beef": "Beef Sandwich",
+  "itemGroup.refinedbasics": "RefinedBasics"
 }
