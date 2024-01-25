@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":
+	[
+		"I I",
+		"I I"
+	],
+	"key":
+	{
+		"I": { "item": "funmod:black_ingot" }
+	},
+	"result": { "item": "funmod:black_boots" }
+}

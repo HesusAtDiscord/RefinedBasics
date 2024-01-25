@@ -1,6 +1,19 @@
 {
+	"item.funmod.black_ingot": "Black Ingot",
+
 	"item.funmod.mithril_ingot": "Mithril Ingot",
 	"item.funmod.mithril_nugget": "Mithril Nugget",
+
+	"item.funmod.black_axe": "Black Axe",
+	"item.funmod.black_pickaxe": "Black Pickaxe",
+	"item.funmod.black_hoe": "Black Hoe",
+	"item.funmod.black_shovel": "Black Shovel",
+	"item.funmod.black_sword": "Black Sword",
+
+	"item.funmod.black_helmet": "Black Helmet",
+	"item.funmod.black_chestplate": "Black Chestplate",
+	"item.funmod.black_leggings": "Black Leggings",
+	"item.funmod.black_boots": "Black Boots",
 
 	"item.funmod.mithril_axe": "Mithril Axe",
 	"item.funmod.mithril_pickaxe": "Mithril Pickaxe",

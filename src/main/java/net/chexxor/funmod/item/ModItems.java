@@ -2,8 +2,12 @@ package net.chexxor.funmod.item;
 
 import java.util.function.Supplier;
 
+import javax.annotation.Nonnull;
+
 import net.chexxor.funmod.FunMod;
-import net.chexxor.funmod.material.ModTiers;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArmorItem.Type;
+import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
@@ -22,14 +26,60 @@ public class ModItems
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FunMod.MOD_ID);
 
+    // Materials
+    public static final RegistryObject<Item> BLACK_INGOT = createItem("black_ingot");
     public static final RegistryObject<Item> MITHRIL_INGOT = createItem("mithril_ingot");
     public static final RegistryObject<Item> MITHRIL_NUGGET = createItem("mithril_nugget");
 
-    public static final RegistryObject<Item> MITHRIL_SWORD      = createItem("mithril_sword",   () -> new SwordItem(ModTiers.MITHRIL, 3, -2.4f, DefaultProperties()));
-    public static final RegistryObject<Item> MITHRIL_PICKAXE    = createItem("mithril_pickaxe", () -> new PickaxeItem(ModTiers.MITHRIL, 1, -2.8f, DefaultProperties()));
-    public static final RegistryObject<Item> MITHRIL_AXE        = createItem("mithril_axe",     () -> new AxeItem(ModTiers.MITHRIL, 6, -3.2f, DefaultProperties()));
-    public static final RegistryObject<Item> MITHRIL_SHOVEL     = createItem("mithril_shovel",  () -> new ShovelItem(ModTiers.MITHRIL, 1, -3.0f, DefaultProperties()));
-    public static final RegistryObject<Item> MITHRIL_HOE        = createItem("mithril_hoe",     () -> new HoeItem(ModTiers.MITHRIL, 0, -1.0f, DefaultProperties()));
+    // Tools
+    public static final RegistryObject<Item> BLACK_SWORD        = createItem("black_sword",     getToolSupplier(ModTiers.BLACK, ToolType.SWORD));
+    public static final RegistryObject<Item> BLACK_PICKAXE      = createItem("black_pickaxe",   getToolSupplier(ModTiers.BLACK, ToolType.PICKAXE));
+    public static final RegistryObject<Item> BLACK_AXE          = createItem("black_axe",       getToolSupplier(ModTiers.BLACK, ToolType.AXE));
+    public static final RegistryObject<Item> BLACK_SHOVEL       = createItem("black_shovel",    getToolSupplier(ModTiers.BLACK, ToolType.SHOVEL));
+    public static final RegistryObject<Item> BLACK_HOE          = createItem("black_hoe",       getToolSupplier(ModTiers.BLACK, ToolType.HOE));
+
+    public static final RegistryObject<Item> MITHRIL_SWORD      = createItem("mithril_sword",   getToolSupplier(ModTiers.MITHRIL, ToolType.SWORD));
+    public static final RegistryObject<Item> MITHRIL_PICKAXE    = createItem("mithril_pickaxe", getToolSupplier(ModTiers.MITHRIL, ToolType.PICKAXE));
+    public static final RegistryObject<Item> MITHRIL_AXE        = createItem("mithril_axe",     getToolSupplier(ModTiers.MITHRIL, ToolType.AXE));
+    public static final RegistryObject<Item> MITHRIL_SHOVEL     = createItem("mithril_shovel",  getToolSupplier(ModTiers.MITHRIL, ToolType.SHOVEL));
+    public static final RegistryObject<Item> MITHRIL_HOE        = createItem("mithril_hoe",     getToolSupplier(ModTiers.MITHRIL, ToolType.HOE));
+
+    // Armor
+    public static final RegistryObject<Item> BLACK_HELMET       = createItem("black_helmet",    getArmorSupplier(ModArmorMaterials.BLACK, Type.HELMET));
+    public static final RegistryObject<Item> BLACK_CHESTPLATE   = createItem("black_chestplate",getArmorSupplier(ModArmorMaterials.BLACK, Type.CHESTPLATE));
+    public static final RegistryObject<Item> BLACK_LEGGINGS     = createItem("black_leggings",  getArmorSupplier(ModArmorMaterials.BLACK, Type.LEGGINGS));
+    public static final RegistryObject<Item> BLACK_BOOTS        = createItem("black_boots",     getArmorSupplier(ModArmorMaterials.BLACK, Type.BOOTS));
+
+    public static final RegistryObject<Item> MITHRIL_HELMET     = createItem("mithril_helmet",  getArmorSupplier(ModArmorMaterials.MITHRIL, Type.HELMET));
+    public static final RegistryObject<Item> MITHRIL_CHESTPLATE = createItem("mithril_chestplate",getArmorSupplier(ModArmorMaterials.MITHRIL, Type.CHESTPLATE));
+    public static final RegistryObject<Item> MITHRIL_LEGGINGS   = createItem("mithril_leggings",getArmorSupplier(ModArmorMaterials.MITHRIL, Type.LEGGINGS));
+    public static final RegistryObject<Item> MITHRIL_BOOTS      = createItem("mithril_boots",   getArmorSupplier(ModArmorMaterials.MITHRIL, Type.BOOTS));
+
+    // TODO: Add override for custom strength and speed values
+    public static Supplier<Item> getToolSupplier(@Nonnull ModTiers tier, ToolType type)
+    {
+        switch (type)
+        {
+            case SWORD:
+                return () -> new SwordItem(tier, 3, -2.4f, DefaultProperties());
+            case PICKAXE:
+                return () -> new PickaxeItem(tier, 1, -2.8f, DefaultProperties());
+            case AXE:
+                return () -> new AxeItem(tier, 6, -3.2f, DefaultProperties());
+            case SHOVEL:
+                return () -> new ShovelItem(tier, 1, -3.0f, DefaultProperties());
+            case HOE:
+                return () -> new HoeItem(tier, 0, -1.0f, DefaultProperties());
+            default:
+                FunMod.Log("Error: getToolItem: Unknown ToolType: " + type.toString());
+                return null;
+        }
+    }
+
+    public static Supplier<Item> getArmorSupplier(@Nonnull ArmorMaterial tier, ArmorItem.Type type)
+    {
+        return () -> new ArmorItem(tier, type, DefaultProperties());
+    }
 
     public static RegistryObject<Item> createItem(String name)
     {
