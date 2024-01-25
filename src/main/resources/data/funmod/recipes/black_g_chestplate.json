@@ -2,10 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     { "item": "minecraft:diamond_chestplate" },
-    { "item": "funmod:black_ingot" }
+    { "item": "funmod:black_ingot" },
+    { "item": "minecraft:gold_ingot" }
   ],
   "result": {
-    "item": "funmod:black_chestplate",
+    "item": "funmod:black_g_chestplate",
     "count": 1
   }
 }

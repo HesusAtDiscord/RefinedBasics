@@ -15,6 +15,11 @@
 	"item.funmod.black_leggings": "Black Leggings",
 	"item.funmod.black_boots": "Black Boots",
 
+	"item.funmod.black_g_helmet": "Black Helmet (G)",
+	"item.funmod.black_g_chestplate": "Black Chestplate (G)",
+	"item.funmod.black_g_leggings": "Black Leggings (G)",
+	"item.funmod.black_g_boots": "Black Boots (G)",
+
 	"item.funmod.mithril_axe": "Mithril Axe",
 	"item.funmod.mithril_pickaxe": "Mithril Pickaxe",
 	"item.funmod.mithril_hoe": "Mithril Hoe",
@@ -29,7 +34,7 @@
 	"block.funmod.mithril_ore": "Mithril Ore",
 	"block.funmod.fun_furnace": "Chexxor Furnace",
 
-	"itemGroup.funmod": "FunMod Item Group",
+	"itemGroup.funmod": "Chexxor",
 
 	"container.funmod.furnace": "Chexxor Furnace"
 }

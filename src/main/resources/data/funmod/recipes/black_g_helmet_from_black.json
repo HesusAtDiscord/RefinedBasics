@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "funmod:black_helmet" },
+    { "item": "minecraft:gold_ingot" }
+  ],
+  "result": {
+    "item": "funmod:black_g_helmet",
+    "count": 1
+  }
+}

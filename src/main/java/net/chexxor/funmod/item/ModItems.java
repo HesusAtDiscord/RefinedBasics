@@ -45,15 +45,20 @@ public class ModItems
     public static final RegistryObject<Item> MITHRIL_HOE        = createItem("mithril_hoe",     getToolSupplier(ModTiers.MITHRIL, ToolType.HOE));
 
     // Armor
-    public static final RegistryObject<Item> BLACK_HELMET       = createItem("black_helmet",    getArmorSupplier(ModArmorMaterials.BLACK, Type.HELMET));
-    public static final RegistryObject<Item> BLACK_CHESTPLATE   = createItem("black_chestplate",getArmorSupplier(ModArmorMaterials.BLACK, Type.CHESTPLATE));
-    public static final RegistryObject<Item> BLACK_LEGGINGS     = createItem("black_leggings",  getArmorSupplier(ModArmorMaterials.BLACK, Type.LEGGINGS));
-    public static final RegistryObject<Item> BLACK_BOOTS        = createItem("black_boots",     getArmorSupplier(ModArmorMaterials.BLACK, Type.BOOTS));
+    public static final RegistryObject<Item> BLACK_HELMET       = createItem("black_helmet",        getArmorSupplier(ModArmorMaterials.BLACK, Type.HELMET));
+    public static final RegistryObject<Item> BLACK_CHESTPLATE   = createItem("black_chestplate",    getArmorSupplier(ModArmorMaterials.BLACK, Type.CHESTPLATE));
+    public static final RegistryObject<Item> BLACK_LEGGINGS     = createItem("black_leggings",      getArmorSupplier(ModArmorMaterials.BLACK, Type.LEGGINGS));
+    public static final RegistryObject<Item> BLACK_BOOTS        = createItem("black_boots",         getArmorSupplier(ModArmorMaterials.BLACK, Type.BOOTS));
 
-    public static final RegistryObject<Item> MITHRIL_HELMET     = createItem("mithril_helmet",  getArmorSupplier(ModArmorMaterials.MITHRIL, Type.HELMET));
-    public static final RegistryObject<Item> MITHRIL_CHESTPLATE = createItem("mithril_chestplate",getArmorSupplier(ModArmorMaterials.MITHRIL, Type.CHESTPLATE));
-    public static final RegistryObject<Item> MITHRIL_LEGGINGS   = createItem("mithril_leggings",getArmorSupplier(ModArmorMaterials.MITHRIL, Type.LEGGINGS));
-    public static final RegistryObject<Item> MITHRIL_BOOTS      = createItem("mithril_boots",   getArmorSupplier(ModArmorMaterials.MITHRIL, Type.BOOTS));
+    public static final RegistryObject<Item> BLACK_HELMET_G     = createItem("black_g_helmet",      getArmorSupplier(ModArmorMaterials.BLACK_GOLD, Type.HELMET));
+    public static final RegistryObject<Item> BLACK_CHESTPLATE_G = createItem("black_g_chestplate",  getArmorSupplier(ModArmorMaterials.BLACK_GOLD, Type.CHESTPLATE));
+    public static final RegistryObject<Item> BLACK_LEGGINGS_G   = createItem("black_g_leggings",    getArmorSupplier(ModArmorMaterials.BLACK_GOLD, Type.LEGGINGS));
+    public static final RegistryObject<Item> BLACK_BOOTS_G      = createItem("black_g_boots",       getArmorSupplier(ModArmorMaterials.BLACK_GOLD, Type.BOOTS));
+
+    public static final RegistryObject<Item> MITHRIL_HELMET     = createItem("mithril_helmet",      getArmorSupplier(ModArmorMaterials.MITHRIL, Type.HELMET));
+    public static final RegistryObject<Item> MITHRIL_CHESTPLATE = createItem("mithril_chestplate",  getArmorSupplier(ModArmorMaterials.MITHRIL, Type.CHESTPLATE));
+    public static final RegistryObject<Item> MITHRIL_LEGGINGS   = createItem("mithril_leggings",    getArmorSupplier(ModArmorMaterials.MITHRIL, Type.LEGGINGS));
+    public static final RegistryObject<Item> MITHRIL_BOOTS      = createItem("mithril_boots",       getArmorSupplier(ModArmorMaterials.MITHRIL, Type.BOOTS));
 
     // TODO: Add override for custom strength and speed values
     public static Supplier<Item> getToolSupplier(@Nonnull ModTiers tier, ToolType type)

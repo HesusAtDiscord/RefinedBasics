@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "funmod:black_boots" },
+    { "item": "minecraft:gold_ingot" }
+  ],
+  "result": {
+    "item": "funmod:black_g_boots",
+    "count": 1
+  }
+}
