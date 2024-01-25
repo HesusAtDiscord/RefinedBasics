@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "refinedbasics:mithril_ore",
-    "refinedbasics:mithril_block"
+    "refinedbasics:mithril_block",
+    "funmod:fun_furnace",
+    "funmod:mithril_ore"
   ]
 }

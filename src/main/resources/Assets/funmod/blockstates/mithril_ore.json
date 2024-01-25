@@ -1,0 +1,6 @@
+{
+	"variants":
+	{
+		"": { "model": "funmod:block/mithril_ore" }
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":
+	[
+		"NN",
+		"NN"
+	],
+	"key":
+	{
+		"N": { "item": "funmod:mithril_nugget" }
+	},
+	"result": { "item": "funmod:mithril_ingot" }
+}
