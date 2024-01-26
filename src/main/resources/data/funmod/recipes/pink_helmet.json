@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "minecraft:diamond_helmet" },
+    { "item": "funmod:pink_diamond" }
+  ],
+  "result": {
+    "item": "funmod:pink_helmet",
+    "count": 1
+  }
+}

@@ -12,6 +12,10 @@ public enum ModTiers implements Tier
         () -> { return Ingredient.of(ModItems.BLACK_INGOT.get());
     }),
 
+    PINK(2, 300, 6.0F, 2.5F, 5,
+        () -> { return Ingredient.of(ModItems.PINK_DIAMOND.get());
+    }),
+
     MITHRIL(3, 2000, 10.0F, 3.0F, 30,
         () -> { return Ingredient.of(ModItems.MITHRIL_INGOT.get());
     });

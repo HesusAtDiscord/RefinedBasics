@@ -9,7 +9,6 @@ import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorItem.Type;
 import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
 public enum ModArmorMaterials implements ArmorMaterial
@@ -23,7 +22,11 @@ public enum ModArmorMaterials implements ArmorMaterial
     }),
 
     BLACK_GOLD("black_g", 15, new int[]{3, 6, 8, 3}, 10, 2.5F, 0.0F,
-        () -> { return Ingredient.of(Items.DIAMOND);
+        () -> { return Ingredient.of(ModItems.BLACK_INGOT.get());
+    }),
+
+    PINK("pink", 15, new int[]{3, 6, 8, 3}, 10, 2.5F, 0.0F,
+        () -> { return Ingredient.of(ModItems.PINK_DIAMOND.get());
     }),
 
     MITHRIL("mithril", 33, new int[]{3, 6, 8, 3}, 10, 2.0F, 0.0F,

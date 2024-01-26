@@ -30,6 +30,7 @@ public class ModItems
     public static final RegistryObject<Item> BLACK_INGOT = createItem("black_ingot");
     public static final RegistryObject<Item> MITHRIL_INGOT = createItem("mithril_ingot");
     public static final RegistryObject<Item> MITHRIL_NUGGET = createItem("mithril_nugget");
+    public static final RegistryObject<Item> PINK_DIAMOND = createItem("pink_diamond");
 
     // Tools
     public static final RegistryObject<Item> BLACK_SWORD        = createItem("black_sword",     getToolSupplier(ModTiers.BLACK, ToolType.SWORD));
@@ -54,6 +55,11 @@ public class ModItems
     public static final RegistryObject<Item> BLACK_CHESTPLATE_G = createItem("black_g_chestplate",  getArmorSupplier(ModArmorMaterials.BLACK_GOLD, Type.CHESTPLATE));
     public static final RegistryObject<Item> BLACK_LEGGINGS_G   = createItem("black_g_leggings",    getArmorSupplier(ModArmorMaterials.BLACK_GOLD, Type.LEGGINGS));
     public static final RegistryObject<Item> BLACK_BOOTS_G      = createItem("black_g_boots",       getArmorSupplier(ModArmorMaterials.BLACK_GOLD, Type.BOOTS));
+
+    public static final RegistryObject<Item> PINK_HELMET        = createItem("pink_helmet",         getArmorSupplier(ModArmorMaterials.PINK, Type.HELMET));
+    public static final RegistryObject<Item> PINK_CHESTPLATE    = createItem("pink_chestplate",     getArmorSupplier(ModArmorMaterials.PINK, Type.CHESTPLATE));
+    public static final RegistryObject<Item> PINK_LEGGINGS      = createItem("pink_leggings",       getArmorSupplier(ModArmorMaterials.PINK, Type.LEGGINGS));
+    public static final RegistryObject<Item> PINK_BOOTS         = createItem("pink_boots",          getArmorSupplier(ModArmorMaterials.PINK, Type.BOOTS));
 
     public static final RegistryObject<Item> MITHRIL_HELMET     = createItem("mithril_helmet",      getArmorSupplier(ModArmorMaterials.MITHRIL, Type.HELMET));
     public static final RegistryObject<Item> MITHRIL_CHESTPLATE = createItem("mithril_chestplate",  getArmorSupplier(ModArmorMaterials.MITHRIL, Type.CHESTPLATE));

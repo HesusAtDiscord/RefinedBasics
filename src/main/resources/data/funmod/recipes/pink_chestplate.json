@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "minecraft:diamond_chestplate" },
+    { "item": "funmod:pink_diamond" }
+  ],
+  "result": {
+    "item": "funmod:pink_chestplate",
+    "count": 1
+  }
+}

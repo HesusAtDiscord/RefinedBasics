@@ -3,6 +3,7 @@
 
 	"item.funmod.mithril_ingot": "Mithril Ingot",
 	"item.funmod.mithril_nugget": "Mithril Nugget",
+	"item.funmod.pink_diamond": "Barbie Diamond",
 
 	"item.funmod.black_axe": "Black Axe",
 	"item.funmod.black_pickaxe": "Black Pickaxe",
@@ -19,6 +20,11 @@
 	"item.funmod.black_g_chestplate": "Black Chestplate (G)",
 	"item.funmod.black_g_leggings": "Black Leggings (G)",
 	"item.funmod.black_g_boots": "Black Boots (G)",
+
+	"item.funmod.pink_helmet": "Barbie Helmet",
+	"item.funmod.pink_chestplate": "Barbie Chestplate",
+	"item.funmod.pink_leggings": "Barbie Leggings",
+	"item.funmod.pink_boots": "Barbie Boots",
 
 	"item.funmod.mithril_axe": "Mithril Axe",
 	"item.funmod.mithril_pickaxe": "Mithril Pickaxe",
