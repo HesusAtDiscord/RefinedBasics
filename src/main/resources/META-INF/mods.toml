@@ -79,7 +79,7 @@ license="GNU License"
     modId="funmod" #mandatory
     # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
     # see the associated build.gradle script for how to populate this completely automatically during a build
-    version="0.0.1-1.20.4" #mandatory
+    version="0.0.2-1.20.4" #mandatory
     # A display name for the mod
     displayName="Chexxor's Mod" #mandatory
     # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
