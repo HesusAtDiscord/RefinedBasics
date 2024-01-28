@@ -5,6 +5,7 @@ import java.util.function.Supplier;
 import javax.annotation.Nonnull;
 
 import net.chexxor.funmod.FunMod;
+import net.chexxor.funmod.item.smithing.SmithingTemplates;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorItem.Type;
 import net.minecraft.world.item.ArmorMaterial;
@@ -66,6 +67,11 @@ public class ModItems
     public static final RegistryObject<Item> MITHRIL_LEGGINGS   = createItem("mithril_leggings",    getArmorSupplier(ModArmorMaterials.MITHRIL, Type.LEGGINGS));
     public static final RegistryObject<Item> MITHRIL_BOOTS      = createItem("mithril_boots",       getArmorSupplier(ModArmorMaterials.MITHRIL, Type.BOOTS));
 
+    // Smithing Upgrades
+    public static final RegistryObject<Item> BLACK_UPGRADE      = createSmithingUpgrade("smithing_template_black_upgrade");
+    public static final RegistryObject<Item> BLACK_G_TRIM       = createSmithingUpgrade("smithing_template_black_g_trim");
+    public static final RegistryObject<Item> BLACK_G_UNTRIM     = createSmithingUpgrade("smithing_template_black_untrim");
+
     // TODO: Add override for custom strength and speed values
     public static Supplier<Item> getToolSupplier(@Nonnull ModTiers tier, ToolType type)
     {
@@ -90,6 +96,11 @@ public class ModItems
     public static Supplier<Item> getArmorSupplier(@Nonnull ArmorMaterial tier, ArmorItem.Type type)
     {
         return () -> new ArmorItem(tier, type, DefaultProperties());
+    }
+
+    public static RegistryObject<Item> createSmithingUpgrade(String name)
+    {
+        return createItem(name, () -> SmithingTemplates.createBlackUpgradeTemplate());
     }
 
     public static RegistryObject<Item> createItem(String name)

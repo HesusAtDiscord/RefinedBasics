@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:smithing_transform",
+    "addition": {
+      "item": "minecraft:black_dye"
+    },
+    "base": {
+      "item": "funmod:black_g_chestplate"
+    },
+    "result": {
+      "item": "funmod:black_chestplate"
+    },
+    "template": {
+      "item": "funmod:smithing_template_black_untrim"
+    }
+  }

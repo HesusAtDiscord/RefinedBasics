@@ -1,0 +1,28 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "funmod:black_g_helmet",
+            "funmod:black_g_chestplate",
+            "funmod:black_g_leggings",
+            "funmod:black_g_boots"
+        ]
+    },
+    "criteria": {
+        "has_black_leggings": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "funmod:black_leggings"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_black_leggings"
+        ]
+    ]
+}

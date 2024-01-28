@@ -1,0 +1,28 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "funmod:pink_helmet",
+            "funmod:pink_chestplate",
+            "funmod:pink_leggings",
+            "funmod:pink_boots"
+        ]
+    },
+    "criteria": {
+        "has_pink_diamond": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "funmod:pink_diamond"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_pink_diamond"
+        ]
+    ]
+}

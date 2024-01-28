@@ -1,0 +1,33 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "funmod:black_helmet",
+            "funmod:black_chestplate",
+            "funmod:black_leggings",
+            "funmod:black_boots",
+            "funmod:black_sword",
+            "funmod:black_pickaxe",
+            "funmod:black_axe",
+            "funmod:black_shovel",
+            "funmod:black_hoe"
+        ]
+    },
+    "criteria": {
+        "has_black_ingot": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "funmod:black_ingot"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_black_ingot"
+        ]
+    ]
+}

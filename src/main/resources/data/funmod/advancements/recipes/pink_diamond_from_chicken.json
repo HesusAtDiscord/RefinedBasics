@@ -1,0 +1,25 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "funmod:pink_diamond"
+        ]
+    },
+    "criteria": {
+        "has_chicken": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:chicken"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_chicken"
+        ]
+    ]
+}

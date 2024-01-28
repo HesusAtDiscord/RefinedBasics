@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":
+	[
+		"CDC",
+		"CBC",
+		"CCC"
+	],
+	"key":
+	{
+		"B": { "item": "funmod:black_ingot" },
+		"C": { "item": "minecraft:black_dye" },
+		"D": { "item": "minecraft:diamond" }
+	},
+	"result": { "item": "funmod:smithing_template_black_upgrade" }
+}

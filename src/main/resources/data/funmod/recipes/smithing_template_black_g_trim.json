@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":
+	[
+		"BBB",
+		"BGB",
+		"BBB"
+	],
+	"key":
+	{
+		"B": { "item": "minecraft:black_dye" },
+		"G": { "item": "minecraft:gold_ingot" }
+	},
+	"result": { "item": "funmod:smithing_template_black_g_trim" }
+}

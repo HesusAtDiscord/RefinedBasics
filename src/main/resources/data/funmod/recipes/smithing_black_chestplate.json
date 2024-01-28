@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:smithing_transform",
+    "addition": {
+      "item": "funmod:black_ingot"
+    },
+    "base": {
+      "item": "minecraft:diamond_chestplate"
+    },
+    "result": {
+      "item": "funmod:black_chestplate"
+    },
+    "template": {
+      "item": "funmod:smithing_template_black_upgrade"
+    }
+  }

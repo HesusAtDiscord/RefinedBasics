@@ -1,0 +1,33 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "funmod:mithril_helmet",
+            "funmod:mithril_chestplate",
+            "funmod:mithril_leggings",
+            "funmod:mithril_boots",
+            "funmod:mithril_sword",
+            "funmod:mithril_pickaxe",
+            "funmod:mithril_axe",
+            "funmod:mithril_shovel",
+            "funmod:mithril_hoe"
+        ]
+    },
+    "criteria": {
+        "has_mithril_ingot": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "funmod:mithril_ingot"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_mithril_ingot"
+        ]
+    ]
+}
