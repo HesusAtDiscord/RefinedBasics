@@ -22,7 +22,7 @@ license="GNU License"
     modId="refinedbasics" #mandatory
     # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
     # see the associated build.gradle script for how to populate this completely automatically during a build
-    version="0.0.1-1.20.4" #mandatory
+    version="0.1.0-1.20.4" #mandatory
     # A display name for the mod
     displayName="Refined Basics" #mandatory
     # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
@@ -30,7 +30,7 @@ license="GNU License"
     # A URL for the "homepage" for this mod, displayed in the mod UI
     #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
     # A file name (in the root of the mod JAR) containing a logo for display
-    logoFile="mithril_ingot.png" #optional
+    # logoFile="mithril_ingot.png" #optional
     # A text field displayed in the mod UI
     credits="Eternal procrastination... and Chexxor I guess" #optional
     # A text field displayed in the mod UI

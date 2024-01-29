@@ -5,6 +5,21 @@
   "container.refinedbasics.test_furnace": "Iron Furnace",
   "item.refinedbasics.mithril_ingot": "Mithril Ingot",
   "item.refinedbasics.mithril_raw": "Raw Mithril",
+
+  "item.refinedbasics.bread_slice": "slice of Bread",
+  "item.refinedbasics.raw_bacon_slice": "Raw Bacon",
+  "item.refinedbasics.cooked_beef_slice": "Slice of Steak",
+  "item.refinedbasics.cooked_porkchop_slice": "Slice of Porkchop",
+  "item.refinedbasics.cooked_mutton_slice": "Slice of Mutton",
+  "item.refinedbasics.cooked_bacon": "Bacon",
+  "item.refinedbasics.cooked_egg": "Cooked Egg",
+  "item.refinedbasics.cooked_chicken_slice": "Slice of Chicken",
+
   "item.refinedbasics.sandwich_beef": "Beef Sandwich",
+  "item.refinedbasics.sandwich_porkchop": "Pork Sandwich",
+  "item.refinedbasics.sandwich_mutton": "Mutton Sandwich",
+  "item.refinedbasics.sandwich_chicken": "Chicken Sandwich",
+  "item.refinedbasics.sandwich_egg_bacon": "Egg & Bacon Sandwich",
+
   "itemGroup.refinedbasics": "RefinedBasics"
 }
