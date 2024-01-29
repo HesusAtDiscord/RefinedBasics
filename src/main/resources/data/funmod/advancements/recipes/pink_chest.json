@@ -1,0 +1,25 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "funmod:pink_chest"
+        ]
+    },
+    "criteria": {
+        "has_pink_dye": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:pink_dye"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_pink_dye"
+        ]
+    ]
+}

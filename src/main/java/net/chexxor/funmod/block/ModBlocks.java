@@ -5,6 +5,7 @@ import java.util.function.Supplier;
 import javax.annotation.Nonnull;
 
 import net.chexxor.funmod.FunMod;
+import net.chexxor.funmod.block.entity.ModBlockEntities;
 import net.chexxor.funmod.item.ModCreativeModeTab;
 import net.chexxor.funmod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -12,7 +13,11 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ChestBlock;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -46,8 +51,14 @@ public class ModBlocks
         return Properties.of().strength(strength).requiresCorrectToolForDrops();
     }
 
+    // Pink chest
+    public static final RegistryObject<Block> PINK_CHEST =
+        // registerBlock("pink_chest", () -> new ChestBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD), () -> BlockEntityType.CHEST));
+        registerBlock("pink_chest", () -> new ChestBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD), () -> ModBlockEntities.PINK_CHEST_ENTITY.get()));
+
     public static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block)
     {
+        FunMod.Log("Registering BLOCK: " + name);
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         RegistryObject<Item> item = registerBlockItem(name, toReturn);
         ModCreativeModeTab.addToTab(item);
@@ -58,6 +69,7 @@ public class ModBlocks
         String name,
         RegistryObject<T> block)
     {
+        FunMod.Log("Registering BLOCKITEM: " + name);
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 

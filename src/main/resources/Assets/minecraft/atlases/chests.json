@@ -1,0 +1,16 @@
+{
+    "sources": [
+      {
+        "type": "minecraft:single",
+        "resource": "funmod:model/chest/pink"
+      },
+      {
+        "type": "minecraft:single",
+        "resource": "funmod:model/chest/pink_left"
+      },
+      {
+        "type": "minecraft:single",
+        "resource": "funmod:model/chest/pink_right"
+      }
+    ]
+}

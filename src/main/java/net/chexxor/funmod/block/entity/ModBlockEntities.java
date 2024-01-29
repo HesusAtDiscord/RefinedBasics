@@ -18,6 +18,12 @@ public class ModBlockEntities
                 "fun_furnace_entity",
                 () -> BlockEntityType.Builder.of(FunFurnaceBlockEntity::new, ModBlocks.FUN_FURNACE.get()).build(null));
 
+    // pink chest
+    public static final RegistryObject<BlockEntityType<PinkChestBlockEntity>> PINK_CHEST_ENTITY =
+            BLOCK_ENTITIES.register(
+                "pink_chest_entity",
+                () -> BlockEntityType.Builder.of(PinkChestBlockEntity::new, ModBlocks.PINK_CHEST.get()).build(null));
+
     public static void register(IEventBus eventBus)
     {
         BLOCK_ENTITIES.register(eventBus);

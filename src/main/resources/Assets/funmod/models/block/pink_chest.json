@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/chest",
+  "textures": {
+    "particle": "funmod:entity/chest/pink_chest"
+  }
+}
