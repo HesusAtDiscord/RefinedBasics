@@ -6,11 +6,9 @@
             "funmod:black_chestplate",
             "funmod:black_leggings",
             "funmod:black_boots",
-            "funmod:black_sword",
-            "funmod:black_pickaxe",
-            "funmod:black_axe",
-            "funmod:black_shovel",
-            "funmod:black_hoe"
+            "funmod:smithing_template_black_upgrade",
+            "funmod:smithing_template_black_g_trim",
+            "funmod:smithing_template_black_untrim"
         ]
     },
     "criteria": {

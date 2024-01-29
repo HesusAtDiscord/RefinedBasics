@@ -1,9 +1,9 @@
 {
 	"item.funmod.black_ingot": "Black Ingot",
+	"item.funmod.pink_diamond": "Barbie Diamond",
 
 	"item.funmod.mithril_ingot": "Mithril Ingot",
 	"item.funmod.mithril_nugget": "Mithril Nugget",
-	"item.funmod.pink_diamond": "Barbie Diamond",
 
 	"item.funmod.black_axe": "Black Axe",
 	"item.funmod.black_pickaxe": "Black Pickaxe",
@@ -42,5 +42,21 @@
 
 	"itemGroup.funmod": "Chexxor",
 
-	"container.funmod.furnace": "Chexxor Furnace"
+	"container.funmod.furnace": "Chexxor Furnace",
+
+	"item.funmod.smithing_template_black_upgrade": "Smithing Template",
+	"item.funmod.smithing_template_black_g_trim": "Smithing Template",
+	"item.funmod.smithing_template_black_untrim": "Smithing Template",
+	"item.funmod.smithing_template_pink_upgrade": "Smithing Template",
+
+	"item.funmod.smithing_template.diamond.applies_to": "Diamond Equipment",
+	"item.funmod.smithing_template.diamond.base_slot_description": "Add diamond armor",
+
+	"upgrade.funmod.black_upgrade": "Black Upgrade",
+	"item.funmod.smithing_template.black_upgrade.ingredients": "Black Ingot",
+	"item.funmod.smithing_template.black_upgrade.additions_slot_description": "Add Black Ingot",
+
+	"upgrade.funmod.pink_upgrade": "Barbie Upgrade",
+	"item.funmod.smithing_template.pink_upgrade.ingredients": "Barbie Diamond",
+	"item.funmod.smithing_template.pink_upgrade.additions_slot_description": "Add Barbie Diamond"
 }

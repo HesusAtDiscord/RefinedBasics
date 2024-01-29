@@ -1,5 +1,6 @@
 {
 	"type": "minecraft:crafting_shaped",
+	"category": "equipment",
 	"pattern":
 	[
 		"BBB",
@@ -8,7 +9,7 @@
 	],
 	"key":
 	{
-		"B": { "item": "minecraft:black_dye" },
+		"B": { "item": "minecraft:coal" },
 		"G": { "item": "minecraft:gold_ingot" }
 	},
 	"result": { "item": "funmod:smithing_template_black_g_trim" }

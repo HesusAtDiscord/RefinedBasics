@@ -5,7 +5,8 @@
             "funmod:pink_helmet",
             "funmod:pink_chestplate",
             "funmod:pink_leggings",
-            "funmod:pink_boots"
+            "funmod:pink_boots",
+            "funmod:smithing_template_pink_upgrade"
         ]
     },
     "criteria": {

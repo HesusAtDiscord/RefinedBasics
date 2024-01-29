@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:smithing_transform",
+    "addition": {
+      "item": "funmod:pink_diamond"
+    },
+    "base": {
+      "item": "minecraft:diamond_boots"
+    },
+    "result": {
+      "item": "funmod:pink_boots"
+    },
+    "template": {
+      "item": "funmod:smithing_template_pink_upgrade"
+    }
+  }

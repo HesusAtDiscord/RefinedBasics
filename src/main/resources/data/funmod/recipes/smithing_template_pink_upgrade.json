@@ -9,9 +9,9 @@
 	],
 	"key":
 	{
-		"B": { "item": "funmod:black_ingot" },
-		"C": { "item": "minecraft:black_dye" },
+		"B": { "item": "funmod:pink_diamond" },
+		"C": { "item": "minecraft:pink_dye" },
 		"D": { "item": "minecraft:diamond" }
 	},
-	"result": { "item": "funmod:smithing_template_black_upgrade" }
+	"result": { "item": "funmod:smithing_template_pink_upgrade" }
 }

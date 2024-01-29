@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:smithing_transform",
+    "addition": {
+      "item": "funmod:black_ingot"
+    },
+    "base": {
+      "item": "minecraft:diamond_boots"
+    },
+    "result": {
+      "item": "funmod:black_boots"
+    },
+    "template": {
+      "item": "funmod:smithing_template_black_upgrade"
+    }
+  }

@@ -1,5 +1,6 @@
 {
 	"type": "minecraft:crafting_shapeless",
+	"category": "misc",
 	"ingredients":
 	[
 		{ "item": "funmod:mithril_ingot" }

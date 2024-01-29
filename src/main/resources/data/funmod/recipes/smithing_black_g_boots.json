@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:smithing_transform",
+    "addition": {
+      "item": "minecraft:gold_ingot"
+    },
+    "base": {
+      "item": "funmod:black_boots"
+    },
+    "result": {
+      "item": "funmod:black_g_boots"
+    },
+    "template": {
+      "item": "funmod:smithing_template_black_g_trim"
+    }
+  }

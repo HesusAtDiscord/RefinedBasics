@@ -68,9 +68,11 @@ public class ModItems
     public static final RegistryObject<Item> MITHRIL_BOOTS      = createItem("mithril_boots",       getArmorSupplier(ModArmorMaterials.MITHRIL, Type.BOOTS));
 
     // Smithing Upgrades
-    public static final RegistryObject<Item> BLACK_UPGRADE      = createSmithingUpgrade("smithing_template_black_upgrade");
-    public static final RegistryObject<Item> BLACK_G_TRIM       = createSmithingUpgrade("smithing_template_black_g_trim");
-    public static final RegistryObject<Item> BLACK_G_UNTRIM     = createSmithingUpgrade("smithing_template_black_untrim");
+    public static final RegistryObject<Item> BLACK_UPGRADE      = createSmithingUpgrade("smithing_template_black_upgrade", SmithingTemplates.SmithingTemplateType.BLACK);
+    public static final RegistryObject<Item> BLACK_G_TRIM       = createSmithingUpgrade("smithing_template_black_g_trim", SmithingTemplates.SmithingTemplateType.BLACK_G);
+    public static final RegistryObject<Item> BLACK_G_UNTRIM     = createSmithingUpgrade("smithing_template_black_untrim", SmithingTemplates.SmithingTemplateType.BLACK_CLEAN);
+
+    public static final RegistryObject<Item> PINK_UPGRADE       = createSmithingUpgrade("smithing_template_pink_upgrade", SmithingTemplates.SmithingTemplateType.PINK);
 
     // TODO: Add override for custom strength and speed values
     public static Supplier<Item> getToolSupplier(@Nonnull ModTiers tier, ToolType type)
@@ -98,9 +100,9 @@ public class ModItems
         return () -> new ArmorItem(tier, type, DefaultProperties());
     }
 
-    public static RegistryObject<Item> createSmithingUpgrade(String name)
+    public static RegistryObject<Item> createSmithingUpgrade(String name, SmithingTemplates.SmithingTemplateType type)
     {
-        return createItem(name, () -> SmithingTemplates.createBlackUpgradeTemplate());
+        return createItem(name, () -> SmithingTemplates.createUpgradeTemplate(type));
     }
 
     public static RegistryObject<Item> createItem(String name)
