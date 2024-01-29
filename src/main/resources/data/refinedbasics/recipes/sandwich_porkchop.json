@@ -3,10 +3,11 @@
   "ingredients": [
     {"item": "refinedbasics:bread_slice"},
     {"item": "refinedbasics:bread_slice"},
-    {"item": "refinedbasics:cooked_beef_slice"}
+    {"item": "refinedbasics:cooked_porkchop_slice"}
   ],
+
   "result": {
-    "item": "refinedbasics:sandwich_beef",
+    "item": "refinedbasics:sandwich_porkchop",
     "count": 1
   }
 }

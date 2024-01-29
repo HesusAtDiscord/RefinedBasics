@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "minecraft:cooked_mutton"}
+  ],
+
+  "result": {
+    "item": "refinedbasics:cooked_mutton_slice",
+    "count": 4
+  }
+}
